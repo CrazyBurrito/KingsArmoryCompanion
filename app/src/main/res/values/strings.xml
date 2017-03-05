@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">King\'s Armory Companion</string>
+    <string name="num_heroes">Enter the Number of Heroes</string>
+    <string name="confirm">Confirm</string>
+</resources>
