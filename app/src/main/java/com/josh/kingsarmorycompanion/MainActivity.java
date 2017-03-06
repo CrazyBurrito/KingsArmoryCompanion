@@ -1,6 +1,5 @@
 package com.josh.kingsarmorycompanion;
 
-
 import android.content.Intent;
 import android.support.constraint.solver.ArrayLinkedVariables;
 import android.support.v7.app.AppCompatActivity;
@@ -61,4 +60,5 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         startActivity(intent);
     }
 }
+
 

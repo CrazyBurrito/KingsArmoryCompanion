@@ -26,6 +26,7 @@
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="447dp" />
 
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="177dp"

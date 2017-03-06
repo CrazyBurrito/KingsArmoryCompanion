@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -23,7 +22,6 @@ public class MonstersActivity extends AppCompatActivity {
             {0, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5}};
 
     int[] monsterArray = {0, 3, 5, 7, 9, 11, 13, 15};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +72,7 @@ public class MonstersActivity extends AppCompatActivity {
         for(int i=0; i<numMonsters; i++ ){
             Random r = new Random();
             int m1 = r.nextInt(13-1)+1;
+
             if(m1%2==1)
                 side = "ODD";
             else
@@ -105,6 +104,7 @@ public class MonstersActivity extends AppCompatActivity {
 
             if(m1 > 12)
                 m1 = 12;
+
 
             result+= "Level " + chart[wave][m1] + " monster on " + side + " side. (" + m1 + ")\n";
         }
