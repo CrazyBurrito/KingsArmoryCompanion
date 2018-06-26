@@ -2,4 +2,15 @@
     <string name="app_name">KingsArmoryCompanion</string>
     <string name="confirm">Confirm</string>
     <string name="num_heroes">Enter the Number of Heroes</string>
+    <string name="wave">Enter the Current Wave</string>
+
+    <string-array name="num_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
 </resources>

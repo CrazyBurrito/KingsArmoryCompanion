@@ -16,29 +16,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
     public static String EXTRA_MESSAGE = "com.josh.KingsArmoryCompanion.Message";
-    public static int numPlayers = 3;
-    public static int wave = 1;
+    public static int numPlayers;
+    public static int wave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);
-
-        List<String> players = new ArrayList<String>();
-        players.add("1");
-        players.add("2");
-        players.add("3");
-        players.add("4");
-        players.add("5");
-        players.add("6");
-        players.add("7");
-
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, players);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(dataAdapter);
     }
 
     @Override
@@ -54,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void generateResult(View view){
 
+        Spinner heroesSpinner = (Spinner) findViewById(R.id.heroesSpinner);
+        Spinner waveSpinner = (Spinner) findViewById(R.id.waveSpinner);
+        numPlayers = Integer.parseInt((String) heroesSpinner.getSelectedItem());
+        wave = Integer.parseInt((String) waveSpinner.getSelectedItem());
         Intent intent = new Intent(this, MonstersActivity.class);
 
         intent.putExtra(EXTRA_MESSAGE, "");

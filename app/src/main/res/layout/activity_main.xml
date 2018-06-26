@@ -7,31 +7,59 @@
     tools:context="com.josh.kingsarmorycompanion.MainActivity">
 
     <TextView
+        android:id="@+id/numHeroesText"
         android:layout_width="248dp"
         android:layout_height="25dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/num_heroes"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="65dp"
-        android:layout_marginStart="65dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:onClick="generateResult"
         android:text="@string/confirm"
-        tools:layout_editor_absoluteX="148dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="447dp" />
 
 
+    <TextView
+        android:id="@+id/waveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wave"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroesSpinner" />
+
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/heroesSpinner"
         android:layout_width="177dp"
         android:layout_height="36dp"
         tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="268dp" />
+        tools:layout_editor_absoluteY="268dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numHeroesText"
+        android:prompt="@string/num_heroes"
+        android:entries="@array/num_array"/>
+
+    <Spinner
+        android:id="@+id/waveSpinner"
+        android:layout_width="177dp"
+        android:layout_height="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waveText"
+        android:prompt="@string/wave"
+        android:entries="@array/num_array"/>
 
 </android.support.constraint.ConstraintLayout>
